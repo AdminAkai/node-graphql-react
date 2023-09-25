@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 export const getStudents = gql`
   query students {
     id  
-  fullName
+    fullName
   }
 `
 

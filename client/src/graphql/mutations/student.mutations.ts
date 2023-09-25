@@ -1,17 +1,17 @@
 import { gql } from '@apollo/client';
 
-export const getStudents = gql`
-  query students {
-    id  
-  fullName
-  }
+export const enrollStudent = gql`
+  mutation enrollStudent($enrollId: ID!) {
+    enroll(id: $enrollId) {
+      fullName
+    }
+}
 `
 
 export const getEnrolledStudents = gql`
-  query enrollment {
-  enrollment {
-    id
-    fullName
+  mutation registerNewStudent($email: String!, $fullName: String!) {
+    registerStudent(email: $email, fullName: $fullName) {
+      fullName
+    }
   }
-}
 `
