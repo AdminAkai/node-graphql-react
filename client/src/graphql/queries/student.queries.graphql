@@ -1,0 +1,17 @@
+query getEnrolledStudents {
+  enrollment {
+    fullName
+  } 
+}
+
+query getStudent($studentId: ID!) {
+  student(id: $studentId) {
+    fullName
+  }
+}
+
+query getStudents {
+  students {
+    fullName
+  }
+}
